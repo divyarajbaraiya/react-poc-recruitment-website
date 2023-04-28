@@ -1,0 +1,25 @@
+.app-form-container {
+  width: 100%;
+  position: relative;
+
+  .form-input {
+    border: none;
+    border-bottom: 1px solid #a4aeb7;
+    width: 100%;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  .eye-icon {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+  }
+
+  .error-message {
+    color: red;
+  }
+}
