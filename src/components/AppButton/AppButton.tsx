@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 import "./assets/style.scss";
 
@@ -6,7 +6,7 @@ interface AppButtonProps {
   variant?: "primary" | "secondary";
   className?: string;
   type?: "button" | "submit" | "reset";
-  children: JSX.Element;
+  children: ReactNode;
   onClick?: () => void;
 }
 

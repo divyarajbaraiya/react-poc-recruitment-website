@@ -1,18 +1,23 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
-import { BiUserCircle } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 
 import "./assets/style.scss";
 
-import { AppButton, AppFormInput, AppLogo } from "../../components";
+import {
+  AppButton,
+  AppFormInput,
+  AppLoginTypes,
+  AppLogo,
+} from "../../components";
+import { AuthContext } from "../../contexts";
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
-  password: yup.string().min(8).max(32).required(),
+  password: yup.string().min(6).max(32).required(),
 });
 
 type LoginForm = {
@@ -22,6 +27,7 @@ type LoginForm = {
 
 export const LoginPage: FC = () => {
   const navigate = useNavigate();
+  const { dispatch } = useContext(AuthContext);
 
   const {
     register,
@@ -33,11 +39,8 @@ export const LoginPage: FC = () => {
   });
 
   const onSubmitHandler = (data: LoginForm) => {
-    console.log({ data });
-
-    localStorage.setItem("token", Math.random().toString());
+    dispatch({ type: "LOGIN", payload: { ...data } });
     navigate("/");
-
     reset();
   };
 
@@ -53,38 +56,25 @@ export const LoginPage: FC = () => {
           <div className="login-info">
             <h1 className="header-title">LOGIN</h1>
             <h2 className="description-title description-title--secondary">
-              please Login to continue.
+              Please Login to continue
             </h2>
           </div>
 
-          <div className="login-type mt-4">
-            <div className="login-type--item w-50">
-              <BiUserCircle />{" "}
-              <span className="description-title description-title--primary">
-                Candidate
-              </span>
-            </div>
-            <div className="login-type--item active-link">
-              <BiUserCircle />{" "}
-              <span className="description-title description-title--primary">
-                Employer
-              </span>
-            </div>
-          </div>
+          <AppLoginTypes />
 
           <AppFormInput
-            className="mt-4"
+            className="mt-5"
             name={"email"}
             type={"email"}
             label={"Company Email ID"}
-            placeholder={"please enter your company email"}
+            placeholder={"Please enter your company email id."}
             required
             errorMessage={errors?.email?.message as string}
             register={register}
           />
 
           <AppFormInput
-            className="mt-4"
+            className="mt-5"
             name={"password"}
             label={"Password"}
             type={"password"}
@@ -94,7 +84,7 @@ export const LoginPage: FC = () => {
             register={register}
           />
 
-          <Link to="/dummy" className="login-forgot-password mt-2">
+          <Link to="/dummy" className="login-forgot-password mt-4">
             Forgot Password?
           </Link>
 
@@ -110,7 +100,7 @@ export const LoginPage: FC = () => {
             onClick={() => navigate("/register")}
           >
             <span>
-              don't have an account?{" "}
+              Don't have an account?{" "}
               <span className="active-link description-title description-title--primary">
                 Register now
               </span>

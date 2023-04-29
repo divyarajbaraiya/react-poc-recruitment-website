@@ -19,7 +19,6 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-size: var(--primary-font-size);
-  padding: 50px 50px 0 50px;
 }
 
 .header-title {
@@ -33,6 +32,7 @@ body {
   line-height: 16px;
 
   &--primary {
+    line-height: 19px;
     font-weight: 500;
   }
   &--secondary {
@@ -41,7 +41,7 @@ body {
 }
 
 .active-link {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 @import "~bootstrap/scss/bootstrap.scss";

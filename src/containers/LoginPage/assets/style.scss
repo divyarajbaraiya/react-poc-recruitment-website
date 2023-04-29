@@ -18,24 +18,6 @@
       align-items: center;
     }
 
-    .login-type {
-      display: flex;
-      width: 319px;
-      height: 42.31px;
-      border-bottom: 2px #a4aeb7 solid;
-
-      &--item {
-        display: flex;
-        align-items: center;
-
-        svg {
-          margin-right: 5px;
-          height: 36px;
-          width: 36px;
-        }
-      }
-    }
-
     .login-forgot-password {
       border: none;
       color: var(--primary-color);

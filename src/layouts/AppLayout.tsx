@@ -10,7 +10,7 @@ export const AppLayout: FC<AppLayoutProps> = ({
   return (
     <>
       <Header />
-      {children}
+      <section className="app-layout-container-section">{children}</section>
       <Footer />
     </>
   );

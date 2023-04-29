@@ -1,0 +1,43 @@
+.register-container {
+  display: flex;
+  position: relative;
+
+  &--image {
+    background-image: url("../../../assets/image/RegisterBanner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 718.06px;
+    height: 465.17px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 2;
+
+    &--vector {
+      position: absolute;
+      background-image: url("../../../assets/image/RegisterBannerVector.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 718.06px;
+      height: 465.17px;
+      bottom: 30px;
+      left: 60px;
+      z-index: 1;
+    }
+  }
+
+  &--form {
+    display: flex;
+    flex-direction: column;
+
+    .register-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .register-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

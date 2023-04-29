@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./assets/style.scss";
 import { UseFormRegister } from "react-hook-form";
-import { BsEyeSlash } from "react-icons/bs";
+import { BsEyeSlash, BsEyeFill } from "react-icons/bs";
 
 interface AppFormInputProps {
   type?: string;
@@ -24,18 +24,20 @@ export const AppFormInput: FC<AppFormInputProps> = ({
   register,
   type = "text",
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className={`app-form-container ${className}`}>
       <label
         htmlFor={name}
-        className="description-title description-title--secondary"
+        className="description-title description-title--secondary mb-1"
       >
         {label}
         {required && <span className="active-link">*</span>}
       </label>
 
       <input
-        type={type}
+        type={showPassword ? "text" : type}
         id={name}
         {...register(name)}
         placeholder={placeholder}
@@ -43,8 +45,11 @@ export const AppFormInput: FC<AppFormInputProps> = ({
       />
 
       {type === "password" && (
-        <div className="eye-icon">
-          <BsEyeSlash />
+        <div
+          className="eye-icon"
+          onClick={() => setShowPassword((prev) => !prev)}
+        >
+          {showPassword ? <BsEyeFill /> : <BsEyeSlash />}
         </div>
       )}
 

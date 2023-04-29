@@ -1,6 +1,7 @@
 .app-form-container {
-  width: 100%;
   position: relative;
+  width: 319px;
+  height: 49px;
 
   .form-input {
     border: none;
@@ -15,11 +16,12 @@
 
   .eye-icon {
     position: absolute;
-    bottom: 2px;
+    top: 20px;
     right: 2px;
+    cursor: pointer;
   }
 
   .error-message {
-    color: red;
+    color: #4a535c50;
   }
 }

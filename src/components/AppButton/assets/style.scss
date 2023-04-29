@@ -1,11 +1,11 @@
 .app-btn {
+  width: 320px;
   height: 48px;
   background-color: var(--primary-color);
   color: #fff;
   border-radius: 8px;
   border: none;
   text-align: center;
-  width: 100%;
   padding: 10px 5px;
 
   &--secondary {
