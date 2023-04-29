@@ -9,7 +9,7 @@ enum LoginTypeEnum {
 }
 
 export const AppLoginTypes = () => {
-  const [loginType, setLoginType] = useState(LoginTypeEnum.Candidate);
+  const [loginType, setLoginType] = useState(LoginTypeEnum.Employer);
 
   return (
     <div className="login-type mt-4">
