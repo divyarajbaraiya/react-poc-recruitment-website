@@ -3,6 +3,11 @@ import "./assets/style.scss";
 import { UseFormRegister } from "react-hook-form";
 import { BsEyeSlash, BsEyeFill } from "react-icons/bs";
 
+interface OptionType {
+  label: string;
+  value: string;
+}
+
 interface AppFormInputProps {
   type?: string;
   className?: string;
@@ -12,6 +17,8 @@ interface AppFormInputProps {
   name: string;
   placeholder: string;
   register: UseFormRegister<any>;
+  options?: OptionType[];
+  value?: string;
 }
 
 export const AppFormInput: FC<AppFormInputProps> = ({
@@ -23,8 +30,47 @@ export const AppFormInput: FC<AppFormInputProps> = ({
   placeholder = "",
   register,
   type = "text",
+  options = [],
+  value,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
+
+  console.log(value,"value");
+  
+
+  const renderInput = () => {
+    switch (type) {
+      case "select":
+        return (
+          <select
+            id={name}
+            {...register(name)}
+            placeholder={placeholder}
+            className={`form-input form-input--select ${value ? "" : "placeholder-text"}`}
+            value={value}
+          >
+            <option value="" disabled selected hidden>
+              {placeholder}
+            </option>
+
+            {options.map((option) => (
+              <option value={option.value}>{option.label}</option>
+            ))}
+          </select>
+        );
+
+      default:
+        return (
+          <input
+            type={showPassword ? "text" : type}
+            id={name}
+            {...register(name)}
+            placeholder={placeholder}
+            className="form-input"
+          />
+        );
+    }
+  };
 
   return (
     <div className={`app-form-container ${className}`}>
@@ -36,13 +82,7 @@ export const AppFormInput: FC<AppFormInputProps> = ({
         {required && <span className="active-link">*</span>}
       </label>
 
-      <input
-        type={showPassword ? "text" : type}
-        id={name}
-        {...register(name)}
-        placeholder={placeholder}
-        className="form-input"
-      />
+      {renderInput()}
 
       {type === "password" && (
         <div

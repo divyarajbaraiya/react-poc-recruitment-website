@@ -2,8 +2,7 @@ import { FC, useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Link, useNavigate } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 import "./assets/style.scss";
 

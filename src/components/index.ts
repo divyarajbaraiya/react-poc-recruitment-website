@@ -6,3 +6,4 @@ export * from "./AppFormInput";
 export * from "./AppButton";
 export * from "./AppLoginTypes";
 export * from "./AppModal";
+export * from "./AppSearchBox"

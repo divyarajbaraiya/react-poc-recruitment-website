@@ -1,0 +1,138 @@
+.home-container {
+  &--search-bar {
+    height: 484px;
+    width: 100%;
+    background: #f6f7f9;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vector-1 {
+      background-image: url("../../../assets/image/Frame.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 113px;
+      height: 227px;
+      position: absolute;
+      bottom: 0px;
+      right: 30px;
+      z-index: 1;
+    }
+
+    .vector-2 {
+      background-image: url("../../../assets/image/Ellipse\ 179.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 76px;
+      height: 76px;
+      position: absolute;
+      top: 39px;
+      left: 19px;
+      z-index: 1;
+    }
+
+    .vector-3 {
+      background-image: url("../../../assets/image/Ellipse\ 179.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 209px;
+      right: 37px;
+      z-index: 1;
+    }
+
+    .vector-4 {
+      background-image: url("../../../assets/image/RegisterBannerVector.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 127.33px;
+      height: 133.54px;
+      position: absolute;
+      top: 23px;
+      right: 26px;
+      z-index: 1;
+    }
+
+    .vector-5 {
+      background-image: url("../../../assets/image/RegisterBannerVector.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 63px;
+      position: absolute;
+      left: 76px;
+      bottom: 135px;
+      z-index: 1;
+    }
+
+    .vector-6 {
+      background-image: url("../../../assets/image/Ellipse\ 179.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      top: 124px;
+      left: 205px;
+      background: #d9d9d9;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .vector-7 {
+      background-image: url("../../../assets/image/Ellipse\ 179.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 147px;
+      left: 197px;
+      background: #ebd4d8;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .vector-8 {
+      background-image: url("../../../assets/image/Vector\ 5.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1161px;
+      height: 362.86px;
+      position: absolute;
+      top: 52px;
+      left: 38px;
+      right: 167px;
+      z-index: 0;
+    }
+
+    .search-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 880px;
+      z-index: 2;
+
+      &--title {
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 41px;
+      }
+
+      &--description {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 29px;
+      }
+
+      &--form {
+        height: 300px;
+      }
+    }
+  }
+}
