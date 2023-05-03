@@ -1,7 +1,12 @@
 import { FC } from "react";
 
 import "./assets/style.scss";
-import { AppSearchBox } from "../../components";
+import { AppDashboardCard, AppSearchBox } from "../../components";
+
+import img1 from "../../assets/image/card_1.png";
+import img2 from "../../assets/image/card_2.png";
+import img3 from "../../assets/image/card_3.png";
+import img4 from "../../assets/image/card_4.png";
 
 export const HomePage: FC = () => {
   return (
@@ -27,6 +32,21 @@ export const HomePage: FC = () => {
           </div>
         </div>
       </div>
+
+      <div className="home-container--dashboard-card">
+        <AppDashboardCard label="Posted Jobs" count={14} img={img1} />
+        <AppDashboardCard label="Applications" count={145} img={img2} />
+        <AppDashboardCard label="Favorite Candidates" count={34} img={img3} />
+        <AppDashboardCard
+          label="Shortlisted Candidates"
+          count={22}
+          img={img4}
+        />
+      </div>
+
+      <div className="home-container--applications"></div>
+
+      <div className="home-container--candidates"></div>
     </div>
   );
 };

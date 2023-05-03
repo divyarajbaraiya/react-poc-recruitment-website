@@ -1,0 +1,44 @@
+.dashboard-card-container {
+  display: flex;
+  align-items: center;
+  width: 291px;
+  height: 148px;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  border-radius: 8px;
+  padding-left: 23px;
+  background-color: #ffffff;
+
+  .card-image {
+    margin-right: 23px;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+      display: flex;
+
+      .count {
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 66px;
+        margin-right: 20px;
+      }
+
+      .arrow {
+        background-image: url("../../../assets/image/right_arrow.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 14.86px;
+        margin-top: 25px;
+      }
+    }
+
+    &--description {
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}
