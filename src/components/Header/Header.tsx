@@ -1,8 +1,10 @@
 import { FC, useContext } from "react";
 
-import "./style.scss";
+import "./assets/style.scss";
+
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts";
+import { AppHeaderLogo } from "../AppHeaderLogo";
 
 interface HeaderProps {}
 
@@ -18,11 +20,7 @@ export const Header: FC<HeaderProps> = () => {
 
   return (
     <header className="header-container">
-      <div className="header-container--logo">
-        <div className="main-logo" />
-        <span className="title-logo">CANDIDATES</span>
-        <span className="title-logo active-link pl-1">BAZAAR</span>
-      </div>
+      <AppHeaderLogo />
 
       <div className="header-container--action">
         <div className="header-logout">

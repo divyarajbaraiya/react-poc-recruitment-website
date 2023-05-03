@@ -13,24 +13,7 @@
   width: 100%;
   padding: 20px 55px;
 
-  &--logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .main-logo {
-      background-image: url("../../assets/image/logo.png");
-      width: 38px;
-      height: 38px;
-      margin-right: 5px;
-    }
-
-    .title-logo {
-        margin-left: 4px;
-        color: #030505;
-        font-weight: 500
-    }
-  }
+  
 
   &--action {
     display: flex;
@@ -50,7 +33,7 @@
         padding: 5px;
         width: 30px;
         height: 30px;
-        background-image: url("../../assets/image/logo-logout.png");
+        background-image: url("../../../assets/image/logo-logout.png");
         background-size: contain;
         background-repeat: no-repeat;
       }

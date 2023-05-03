@@ -16,8 +16,10 @@ interface AuthState {
   user: User | null;
 }
 
+const isAuth = localStorage.getItem("isAuthenticated");
+
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: !!isAuth,
   user: null,
 };
 
@@ -30,16 +32,16 @@ export const AuthContext = createContext<{
 });
 
 function reducer(state: AuthState, action: Action): AuthState {
-  console.log("sdsad", action);
-
   switch (action.type) {
     case "REGISTER":
+      localStorage.setItem("isAuthenticated", "true");
       return {
         ...state,
         isAuthenticated: true,
         user: action.payload,
       };
     case "LOGIN":
+      localStorage.setItem("isAuthenticated", "true");
       return {
         ...state,
         isAuthenticated: true,

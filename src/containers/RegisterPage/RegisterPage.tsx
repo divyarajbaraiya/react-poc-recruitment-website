@@ -31,7 +31,7 @@ const schema = yup.object().shape({
   location: yup.string().required(),
   contact: yup.string().required(),
   companyName: yup.string().required("company name is a required field"),
-  agree: yup.boolean().required(),
+  agree: yup.boolean().oneOf([true], "agree is a required field").required(),
 });
 
 type RegisterForm = {

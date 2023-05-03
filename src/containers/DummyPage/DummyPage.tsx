@@ -1,7 +1,5 @@
 import { FC } from "react";
 
-interface DummyPageProps {}
-
-export const DummyPage: FC<DummyPageProps> = () => {
+export const DummyPage: FC = () => {
   return <>Dummy Page Redirect</>;
 };
