@@ -13,6 +13,7 @@ import img1 from "../../assets/image/card_1.png";
 import img2 from "../../assets/image/card_2.png";
 import img3 from "../../assets/image/card_3.png";
 import img4 from "../../assets/image/card_4.png";
+import { useNavigate } from "react-router-dom";
 
 enum CandidateTypeEnum {
   FavoriteCandidate = "Favorite candidates",
@@ -20,6 +21,8 @@ enum CandidateTypeEnum {
 }
 
 export const HomePage: FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       <div className="home-container--search-bar">
@@ -70,11 +73,18 @@ export const HomePage: FC = () => {
             <AppApplicantCard />
             <AppApplicantCard />
             <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
           </AppCarousel>
         </div>
 
         <div className="application-action mt-5">
-          <AppButton type="button" variant="secondary" className="search-btn">
+          <AppButton
+            type="button"
+            variant="secondary"
+            className="search-btn"
+            onClick={() => navigate("/dummy")}
+          >
             View All
           </AppButton>
         </div>
@@ -91,6 +101,8 @@ export const HomePage: FC = () => {
 
         {/* <div className="candidates-content mt-4">
           <AppCarousel>
+            <AppApplicantCard />
+            <AppApplicantCard />
             <AppApplicantCard />
             <AppApplicantCard />
             <AppApplicantCard />

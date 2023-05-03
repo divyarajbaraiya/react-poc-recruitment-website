@@ -15,8 +15,6 @@ export const AppCarousel: FC<AppCarouselProps> = ({
     slidesToShow: 3,
     slidesToScroll: 3,
     variableWidth: true,
-    prevArrow: <div className="arrow-button arrow-button--prev" />,
-    nextArrow: <div className="arrow-button arrow-button--next" />,
   };
 
   return (
