@@ -1,12 +1,23 @@
 import { FC } from "react";
 
 import "./assets/style.scss";
-import { AppDashboardCard, AppSearchBox } from "../../components";
 
+import {
+  AppCarousel,
+  AppDashboardCard,
+  AppSearchBox,
+  AppApplicantCard,
+  AppButton,
+} from "../../components";
 import img1 from "../../assets/image/card_1.png";
 import img2 from "../../assets/image/card_2.png";
 import img3 from "../../assets/image/card_3.png";
 import img4 from "../../assets/image/card_4.png";
+
+enum CandidateTypeEnum {
+  FavoriteCandidate = "Favorite candidates",
+  ShortlistedCandidate = "Shortlisted candidates",
+}
 
 export const HomePage: FC = () => {
   return (
@@ -44,9 +55,52 @@ export const HomePage: FC = () => {
         />
       </div>
 
-      <div className="home-container--applications"></div>
+      <div className="home-container--applications">
+        <span className="application-header">Applications</span>
 
-      <div className="home-container--candidates"></div>
+        <div className="home-banner-2" />
+        <div className="home-banner-2--vector" />
+
+        <div className="application-content mt-4">
+          <AppCarousel>
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+          </AppCarousel>
+        </div>
+
+        <div className="application-action mt-5">
+          <AppButton type="button" variant="secondary" className="search-btn">
+            View All
+          </AppButton>
+        </div>
+      </div>
+
+      <div className="home-container--candidates">
+        <div className="home-banner-3" />
+        <div className="home-banner-3--vector" />
+
+        <div>
+          <span>{CandidateTypeEnum.FavoriteCandidate}</span>
+          <span>{CandidateTypeEnum.ShortlistedCandidate}</span>
+        </div>
+
+        {/* <div className="candidates-content mt-4">
+          <AppCarousel>
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+            <AppApplicantCard />
+          </AppCarousel>
+        </div> */}
+      </div>
     </div>
   );
 };

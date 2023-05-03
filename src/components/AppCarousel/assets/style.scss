@@ -1,0 +1,33 @@
+.app-carousel-container {
+  .slick-slider {
+    .slick-dots {
+      margin-top: 10px;
+
+      li button::before {
+        font-size: 12px;
+        background-color: #fff;
+      }
+
+      .slick-active button::before {
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+}
+
+.arrow-button {
+  width: 56px;
+  height: 56px;
+  z-index: 1;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    left: 10px;
+  }
+
+  &--next {
+    right: 10px;
+  }
+}

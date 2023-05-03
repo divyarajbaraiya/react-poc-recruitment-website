@@ -143,12 +143,81 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
   }
 
   &--applications {
+    margin-top: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .application-header {
+      font-weight: 500;
+      font-size: 53px;
+      line-height: 62px;
+    }
+
+    .home-banner-2 {
+      background-image: url("../../../assets/image/HomeBanner2.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 350.67px;
+      height: 320.27px;
+      position: absolute;
+      top: 201px;
+      left: 0px;
+
+      &--vector {
+        position: absolute;
+        background-image: url("../../../assets/image/RegisterBannerVector.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 413.32px;
+        height: 433.48px;
+        top: 85px;
+        left: 45px;
+        z-index: -2;
+      }
+    }
+
+    .application-content {
+      width: 904px;
+    }
+
+    .application-action {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &--candidates {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    position: relative;
+
+    .home-banner-3 {
+      background-image: url("../../../assets/image/HomeBanner1.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 513.77px;
+      height: 672.34px;
+      position: absolute;
+      top: 70px;
+      right: 81px;
+
+      &--vector {
+        position: absolute;
+        background-image: url("../../../assets/image/RegisterBannerVector.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 446.09px;
+        height: 467.85px;
+        top: 70px;
+        right: 81px;
+        z-index: -2;
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { PropsWithChildren, createContext } from "react";
 
 interface User {
   email: string;
@@ -59,11 +59,9 @@ function reducer(state: AuthState, action: Action): AuthState {
   }
 }
 
-type Props = {
-  children: JSX.Element;
-};
-
-export default function AuthProvider({ children }: Props): JSX.Element {
+export default function AuthProvider({
+  children,
+}: PropsWithChildren): JSX.Element {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   return (
