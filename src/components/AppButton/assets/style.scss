@@ -16,5 +16,10 @@
 
   &.search-btn {
     width: 112px;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
   }
 }
