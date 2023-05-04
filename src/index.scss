@@ -1,6 +1,6 @@
 :root {
   --primary-color: #811319;
-  --secondary-color:  #04953E;
+  --secondary-color: #04953e;
   --background-color: #e0e0e0;
   --text-color: #000;
 
@@ -20,6 +20,27 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-size: var(--primary-font-size);
+
+  // scroll bar
+  scrollbar-color: var(--primary-color);
+  scrollbar-width: thin;
+  overscroll-behavior: contain;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 50%;
+  }
 }
 
 .header-title {
