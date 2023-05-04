@@ -5,7 +5,7 @@ import {AppFooterSocial} from '../AppFooterSocial'
 
 export const AppFooterFoot: FC = () => {
   return (
-    <div className="d-flex flex-wrap justify-content-between align-item-center py-3 my-4 border-top">
+    <div className="d-flex flex-wrap justify-content-between align-item-center py-3 my-4 border-top border-2">
         <div className="row">
             <ul className="nav justify-content-left d-flex">
                 <li className="ms-3">Termes & Conditions</li>

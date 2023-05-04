@@ -9,19 +9,18 @@ interface FooterProps {}
 
 export const Footer: FC<FooterProps> = () => {
   const navigate = useNavigate();
-  return <footer className="w-100 py-4">
+  return <footer className="w-100 pt-4">
     <div className="container py-4">
     <div className="row">
-      <div className="col-4 mb-3">
+      <div className="col-4 mb-3 px-3">
       <AppHeaderLogo />
-      <p className="text-justify mt-4 footer--display-text">
+      <p className="text-justify mt-4  footer--display-text">
       CandidatesBazaar is a job portal that aims to provide a platform for employers to publish verified job openings 
       and for job seekers to find and apply for verified job opportunities. The goal of the platform is to help connect 
-      employers with qualified and reliable candidates, 
-      while also helping job seekers find legitimate job opportunities that align with their skills and experience
+      employers with qualified and reliable candidates.
       </p>
       </div>
-      <div className="col-2 mb-3 border-start">
+      <div className="col-2 mb-3 border-start border-2 px-5">
         <h6 className="font-weight-light mb-3">Quick Links</h6>
         <ul className="nav flex-column">
         <li className="nav-item mb-2" onClick={() => navigate("/dummy")}>Post a job</li>
@@ -32,7 +31,7 @@ export const Footer: FC<FooterProps> = () => {
         <li className="nav-item mb-2">Support</li>
         </ul>
       </div>
-      <div className="col-3 mb-3 border-start ">
+      <div className="col-3 mb-3 border-start border-2 px-5">
       <h6 className="mb-3">Contacts</h6>
       <div className="nav flex-column">
       <h6 className="font-weight-bold">Email Us</h6>
@@ -41,7 +40,7 @@ export const Footer: FC<FooterProps> = () => {
       <li className="nav-item mb-2">admin@candidatebazare.com</li>
       </ul> 
       </div>
-      <div className="nav flex-column">
+      <div className="nav flex-column ">
       <h6 className="font-weight-bold">Phone Number</h6>
       <ul className="nav flex-column">
       <li className="nav-item mb-2">+91 9876543210</li>
@@ -49,7 +48,7 @@ export const Footer: FC<FooterProps> = () => {
       </ul> 
       </div>
       </div>
-      <div className="col-3  mb-3  border-start">
+      <div className="col-3  mb-3  border-start border-2 px-5">
       <h6 className="mb-3">Download App</h6>
       <div className="footer--download-app"></div>
       <h6 className="mt-3">Find Us</h6>
