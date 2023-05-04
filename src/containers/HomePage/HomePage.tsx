@@ -65,7 +65,7 @@ export const HomePage: FC = () => {
         <div className="home-banner-2--vector" />
 
         <div className="application-content mt-4">
-          <AppCarousel>
+          <AppCarousel displaySlide={3}>
             <AppApplicantCard />
             <AppApplicantCard />
             <AppApplicantCard />
@@ -109,7 +109,7 @@ export const HomePage: FC = () => {
         </div>
 
         <div className="candidates-content">
-          <AppCarousel>
+          <AppCarousel displaySlide={4}>
             <AppApplicantCard isCandidate />
             <AppApplicantCard isCandidate />
             <AppApplicantCard isCandidate />

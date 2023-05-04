@@ -1,19 +1,23 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, ReactNode } from "react";
 import Slider, { Settings } from "react-slick";
 
 import "./assets/style.scss";
 
-interface AppCarouselProps {}
+interface AppCarouselProps {
+  displaySlide: number;
+  children: ReactNode;
+}
 
 export const AppCarousel: FC<AppCarouselProps> = ({
   children,
-}: PropsWithChildren<AppCarouselProps>) => {
+  displaySlide,
+}) => {
   const settings: Settings = {
     dots: true,
     speed: 500,
     infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: displaySlide,
+    slidesToScroll: displaySlide,
     variableWidth: true,
   };
 
