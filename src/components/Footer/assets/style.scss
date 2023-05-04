@@ -1,0 +1,24 @@
+footer{
+    background-color: rgba(249, 220, 223, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.footer{
+    &--download-app{
+        padding: 5px;
+        width: 154px;
+        height: 38px;
+        background-image: url("../../../assets/image/dowenload-app.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &--display-text{
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+.header-logo-container{
+    justify-content: left;
+}
