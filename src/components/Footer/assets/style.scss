@@ -1,0 +1,37 @@
+.footer-container {
+  background: rgba(249, 220, 223, 0.7);
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0 43px;
+  background-image: url("../../../assets/image/lines-png-clipart-background\ 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .header-logo-container {
+    justify-content: left;
+  }
+
+  &--download-app {
+    padding: 5px;
+    width: 154px;
+    height: 38px;
+    background-image: url("../../../assets/image/dowenload-app.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--display-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+  }
+
+  &--social-media {
+    &--social-icon {
+      width: 32px;
+      height: 32px;
+      color: #8a1538;
+    }
+  }
+}
