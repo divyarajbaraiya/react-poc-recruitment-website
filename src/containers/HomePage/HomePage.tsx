@@ -110,15 +110,15 @@ export const HomePage: FC = () => {
 
         <div className="candidates-content">
           <AppCarousel>
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
-            <AppApplicantCard />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
+            <AppApplicantCard isCandidate />
           </AppCarousel>
         </div>
 

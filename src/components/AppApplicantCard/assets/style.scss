@@ -1,16 +1,27 @@
-.applicant-card-container {
-  width: 283px;
-  height: 313px;
-  background: #ffffff;
-  border: 1px solid #efc7ce;
-  box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.12);
-  padding: 8px 16px;
+.card-container {
   display: flex;
   flex-direction: column;
-  margin-left: 18px;
+  padding: 8px 16px;
 
   :first-child {
     margin-left: 0px;
+  }
+
+  &.applicant-card {
+    width: 283px;
+    height: 313px;
+    background: #ffffff;
+    border: 1px solid #efc7ce;
+    box-shadow: 2px 2px 12px 8px rgba(0, 0, 0, 0.12);
+    margin-left: 18px;
+  }
+
+  &.candidate-card {
+    width: 324px;
+    height: 319px;
+    background: #f7fbf8;
+    border: 1px solid rgba(247, 227, 229, 0.01);
+    margin-left: 28px;
   }
 
   &--info {

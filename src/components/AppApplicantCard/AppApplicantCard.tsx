@@ -4,12 +4,20 @@ import "./assets/style.scss";
 
 import { AppProgressBar } from "../AppProgressBar";
 
-interface AppApplicantCardProps {}
+interface AppApplicantCardProps {
+  isCandidate?: boolean;
+}
 
-export const AppApplicantCard: FC<AppApplicantCardProps> = () => {
+export const AppApplicantCard: FC<AppApplicantCardProps> = ({
+  isCandidate = false,
+}) => {
   return (
-    <div className="applicant-card-container">
-      <div className="applicant-card-container--info">
+    <div
+      className={`card-container ${
+        isCandidate ? "candidate-card" : "applicant-card"
+      }`}
+    >
+      <div className="card-container--info">
         <div className="profile-icon"></div>
         <div className="profile-content">
           <span className="name">Avinash kumar Jha</span>
@@ -18,7 +26,7 @@ export const AppApplicantCard: FC<AppApplicantCardProps> = () => {
         </div>
       </div>
 
-      <div className="applicant-card-container--skill-progress">
+      <div className="card-container--skill-progress">
         <div className="skill-content mt-3">
           <span className="label">Skills Matched</span>
           <span className="percentage">75%</span>
@@ -29,7 +37,7 @@ export const AppApplicantCard: FC<AppApplicantCardProps> = () => {
         </div>
       </div>
 
-      <div className="applicant-card-container--additional mt-5">
+      <div className="card-container--additional mt-5">
         <div className="info-content">
           <div className="d-flex flex-column first">
             <span className="label">Relevant Experience:</span>
