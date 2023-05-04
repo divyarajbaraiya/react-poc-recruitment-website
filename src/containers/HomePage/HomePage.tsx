@@ -96,7 +96,9 @@ export const HomePage: FC = () => {
 
         <div className="candidate-tabs">
           <span>{CandidateTypeEnum.FavoriteCandidate}</span>
-          <span className="active">{CandidateTypeEnum.ShortlistedCandidate}</span>
+          <span className="active">
+            {CandidateTypeEnum.ShortlistedCandidate}
+          </span>
         </div>
 
         <div className="candidate-info">
@@ -106,7 +108,7 @@ export const HomePage: FC = () => {
           </span>
         </div>
 
-        {/* <div className="candidates-content mt-4">
+        <div className="candidates-content">
           <AppCarousel>
             <AppApplicantCard />
             <AppApplicantCard />
@@ -118,7 +120,18 @@ export const HomePage: FC = () => {
             <AppApplicantCard />
             <AppApplicantCard />
           </AppCarousel>
-        </div> */}
+        </div>
+
+        <div className="candidates-action mt-5">
+          <AppButton
+            type="button"
+            variant="secondary"
+            className="search-btn"
+            onClick={() => navigate("/dummy")}
+          >
+            View All
+          </AppButton>
+        </div>
       </div>
     </div>
   );
