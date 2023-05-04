@@ -219,5 +219,38 @@
         z-index: -2;
       }
     }
+
+    .candidate-tabs {
+      margin-top: 200px;
+      margin-left: 160px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      display: inline;
+      width: 391px;
+      border-bottom: 1px solid #a4aeb7;
+
+      span:first-child {
+        margin-right: 40px;
+      }
+
+      span {
+        padding-bottom: 1px;
+
+        &.active {
+          color: var(--primary-color);
+          border-bottom: 6px solid var(--primary-color);
+        }
+      }
+    }
+
+    .candidate-info {
+      margin-top: 76px;
+      margin-left: 160px;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+      width: 391px;
+    }
   }
 }

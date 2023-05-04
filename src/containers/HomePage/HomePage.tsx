@@ -94,9 +94,16 @@ export const HomePage: FC = () => {
         <div className="home-banner-3" />
         <div className="home-banner-3--vector" />
 
-        <div>
+        <div className="candidate-tabs">
           <span>{CandidateTypeEnum.FavoriteCandidate}</span>
-          <span>{CandidateTypeEnum.ShortlistedCandidate}</span>
+          <span className="active">{CandidateTypeEnum.ShortlistedCandidate}</span>
+        </div>
+
+        <div className="candidate-info">
+          <span>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.{" "}
+          </span>
         </div>
 
         {/* <div className="candidates-content mt-4">
