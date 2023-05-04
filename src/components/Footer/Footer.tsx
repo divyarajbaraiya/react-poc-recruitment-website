@@ -6,7 +6,7 @@ import { CiTwitter } from "react-icons/ci";
 import "./assets/style.scss";
 
 import { AppHeaderLogo } from "../AppHeaderLogo";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface FooterProps {}
 
@@ -30,42 +30,49 @@ export const Footer: FC<FooterProps> = () => {
           </div>
 
           <div className="col-2 mb-3 border-start border-2 px-5">
-            <h6 className="font-weight-light mb-3">Quick Links</h6>
+            <h6 className="mb-3 footer-title">Quick Links</h6>
             <ul className="nav flex-column">
-              <li className="nav-item mb-2" onClick={() => navigate("/dummy")}>
+              <li
+                className="nav-item footer-desc-1 mb-2"
+                onClick={() => navigate("/dummy")}
+              >
                 Post a job
               </li>
-              <li className="nav-item mb-2">Application</li>
-              <li className="nav-item mb-2">Shortlisted</li>
-              <li className="nav-item mb-2">Fevorite</li>
-              <li className="nav-item mb-2">Interviews</li>
-              <li className="nav-item mb-2">Support</li>
+              <li className="nav-item footer-desc-1 mb-2">Application</li>
+              <li className="nav-item footer-desc-1 mb-2">Shortlisted</li>
+              <li className="nav-item footer-desc-1 mb-2">Fevorite</li>
+              <li className="nav-item footer-desc-1 mb-2">Interviews</li>
+              <li className="nav-item footer-desc-1 mb-2">Support</li>
             </ul>
           </div>
 
           <div className="col-3 mb-3 border-start border-2 px-5">
-            <h6 className="mb-3">Contacts</h6>
+            <h6 className="mb-3 footer-desc-2">Contacts</h6>
             <div className="nav flex-column">
-              <h6 className="font-weight-bold">Email Us</h6>
+              <h6 className="footer-title">Email Us</h6>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2">info@candidatebazare.com</li>
-                <li className="nav-item mb-2">admin@candidatebazare.com</li>
+                <li className="nav-item mb-2 footer-desc-1">
+                  info@candidatebazare.com
+                </li>
+                <li className="nav-item mb-2 footer-desc-1">
+                  admin@candidatebazare.com
+                </li>
               </ul>
             </div>
             <div className="nav flex-column ">
-              <h6 className="font-weight-bold">Phone Number</h6>
+              <h6 className="footer-title">Phone Number</h6>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2">+91 9876543210</li>
-                <li className="nav-item mb-2">+91 9876543210</li>
+                <li className="nav-item mb-2 footer-desc-1">+91 9876543210</li>
+                <li className="nav-item mb-2 footer-desc-1">+91 9876543210</li>
               </ul>
             </div>
           </div>
 
           <div className="col-3  mb-3  border-start border-2 px-5">
-            <h6 className="mb-3">Download App</h6>
+            <h6 className="mb-3 footer-desc-2">Download App</h6>
             <div className="footer-container--download-app"></div>
-            <h6 className="mt-3">Find Us</h6>
-            <p className="text-left">
+            <h6 className="mt-3 footer-desc-2">Find Us</h6>
+            <p className="text-left footer-desc-1">
               Baârez Technology Solutions, Office No 15, Second Floor, Building
               no. 226, Vasant Vihar, Thane – Mumbai, India.
             </p>
@@ -75,35 +82,35 @@ export const Footer: FC<FooterProps> = () => {
         <div className="d-flex flex-wrap justify-content-between align-item-center py-3 my-4 border-top border-2">
           <div className="row">
             <ul className="nav justify-content-left d-flex">
-              <li className="ms-3">Termes & Conditions</li>
-              <li className="ms-3">Privacy</li>
-              <li className="ms-3">Cookies</li>
+              <li className="footer-desc-1 ms-3">Termes & Conditions</li>
+              <li className="footer-desc-1 ms-3">Privacy</li>
+              <li className="footer-desc-1 ms-3">Cookies</li>
             </ul>
           </div>
 
           <div className="d-flex align-items-center">
-            <small className="">
+            <span className="footer-desc-3">
               © 2023 Candidates Baazar.com. All Rights Reserved
-            </small>
+            </span>
           </div>
 
           <div className="row footer-container--social-media">
             <ul className="nav justify-content-end d-flex align-item-center">
-              <li className="ms-3 mt-1">Follow Us</li>
+              <li className="footer-desc-1 ms-3 mt-2">Follow Us</li>
               <li className="ms-3">
-                <a href="#" className="text-muted">
+                <Link to="#" className="text-muted">
                   <CiFacebook className="footer-container--social-media--social-icon" />
-                </a>
+                </Link>
               </li>
               <li className="ms-3">
-                <a href="#" className="text-muted">
+                <Link to="#" className="text-muted">
                   <CiLinkedin className="footer-container--social-media--social-icon" />
-                </a>
+                </Link>
               </li>
               <li className="ms-3">
-                <a href="#" className="text-muted">
+                <Link to="#" className="text-muted">
                   <CiTwitter className="footer-container--social-media--social-icon" />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
